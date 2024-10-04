@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="6ea209c8-099b-4838-b128-b5ab234f94bc" name="vps">
+        <fileTransfer rootFolder="/var/www/html/dwes/basico" accessType="SFTP" host="vps456458.ovh.net" port="22" sshConfigId="fe69fdde-4a4d-4041-9d3b-9ec0278d08d5" sshConfig="root@vps456458.ovh.net:22 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

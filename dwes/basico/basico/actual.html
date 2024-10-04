@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+<form method="post" action="tradicional.php">
+    <input type="text" id="txtNombre">
+    <input type="text" id="txtEdad">
+    <button type="button" onclick="enviarDatos()">Enviar</button>
+</form>
+<div id="divResultado"></div>
+</body>
+<script>
+    function enviarDatos() {
+        $.ajax({
+            type: "POST",
+            url: "actual.php",
+            data: {'nombre': $("#txtNombre").val(), "edad": $("#txtEdad").val()}
+        }).done(function (data) {
+            $("#divResultado").html(data);
+        });
+    }
+</script>
+</html>
