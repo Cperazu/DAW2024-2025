@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link href="http://vps456458.ovh.net/dwes/node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="http://vps456458.ovh.net/dwes/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="http://vps456458.ovh.net/dwes/node_modules/apiFetch.js"></script>
+    <link href="http://vps456458.ovh.net/dwes/node_modules/@fortawesome/fontawesome-free/css/all.css" rel="stylesheet">
+</head>
+<body>
+<div class="container-fluid">
+    <div class="row align-items-start">
+        <div class="col bg-light">
+            <form id="frmDatos">
+                <div class="row g-3">
+                    <div class="col">
+                        <input type="text" name="nombre" id="nombre" class="form-control" placeholder="Nombre"
+                               aria-label="Nombre">
+                    </div>
+                    <div class="col">
+                        <input type="text" name="edad" id="edad" class="form-control" placeholder="Edad"
+                               aria-label="Edad">
+                    </div>
+                </div>
+                <div class="row g-3">
+                    <div class="col">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="chkSexo" id="chkSexo1" value="Hombre">
+                            <label class="form-check-label" for="chkSexo1">
+                                Hombre
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="chkSexo" id="chkSexo2" value="Mujer">
+                            <label class="form-check-label" for="chkSexo2">
+                                Mujer
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <input type="text" name="observaciones" id="observaciones" class="form-control"
+                               placeholder="Observaciones"
+                               aria-label="Observaciones">
+                    </div>
+                </div>
+                <div class="row g-3">
+                    <div class="col"></div>
+                    <div class="col">
+                        <button id="butEnviar" type="button" class="btn btn-primary">Enviar</button>
+                    </div>
+                </div>
+        </div>
+        </form>
+        <div class="container-sm">
+            <table id="tbDatos" class="table">
+                <thead>
+                <tr>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Edad</th>
+                    <th scope="col">Sexo</th>
+                    <th scope="col">Observaciones</th>
+                    <th scope="col">Acciones</th>
+                </tr>
+                </thead>
+                <tbody id="tbAgenda"></tbody>
+            </table>
+        </div>
+    </div>
+</div>
+</div>
+<script src="form07.js?daw=3"></script>
+</body>
+</html>

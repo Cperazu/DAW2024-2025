@@ -1,0 +1,14 @@
+[
+  {
+    "nombre": "Luis García",
+    "fechaAlta": "2015/05/16",
+    "bruto": 1954.34,
+    "irpf": 14.34
+  },
+  {
+    "nombre": "Ana Sánchez",
+    "fechaAlta": "2020/01/10",
+    "bruto": 2230.15,
+    "irpf": 18.40
+  }
+]

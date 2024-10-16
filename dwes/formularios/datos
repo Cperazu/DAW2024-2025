@@ -1,0 +1,30 @@
+[
+    {
+        "nombre": "christian",
+        "edad": "22",
+        "sexo": "Hombre",
+        "observaciones": "",
+        "fecha": "2024-10-16 09:21:03"
+    },
+    {
+        "nombre": "pepe",
+        "edad": "30",
+        "sexo": "Mujer",
+        "observaciones": "",
+        "fecha": "2024-10-16 09:31:42"
+    },
+    {
+        "nombre": "a",
+        "edad": "l",
+        "sexo": "Hombre",
+        "observaciones": "0",
+        "fecha": "2024-10-16 09:31:52"
+    },
+    {
+        "nombre": "christian",
+        "edad": "30",
+        "sexo": "Mujer",
+        "observaciones": "aaaa",
+        "fecha": "2024-10-16 09:34:31"
+    }
+]
