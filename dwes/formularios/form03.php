@@ -19,7 +19,7 @@ if (file_exists(FICHERO)) {
 <div class="container-fluid">
     <div class="row align-items-start">
         <div class="col bg-light">
-            <form id="frmDatos">
+            <form id="frmDatos" method="post" action="./procesarForm03.php">
                 <div class="row g-3">
                     <div class="col">
                         <input type="text" name="nombre" class="form-control" placeholder="Nombre" aria-label="Nombre">
@@ -51,7 +51,7 @@ if (file_exists(FICHERO)) {
                 <div class="row g-3">
                     <div class="col"></div>
                     <div class="col">
-                        <button type="button" class="btn btn-primary" onclick="guardarDatos()">Enviar</button>
+                        <button type="submit" class="btn btn-primary" onclick="guardarDatos()">Enviar</button>
                     </div>
                 </div>
         </div>
@@ -84,17 +84,5 @@ if (file_exists(FICHERO)) {
 </div>
 </div>
 </body>
-<script>
-    function guardarDatos() {
-        console.log($("#frmDatos").serialize());
-        $.ajax({
-            type: "POST",
-            url: "procesarForm03.php",
-            data: $("#frmDatos").serialize()
-        }).done(function (data) {
-            const piezas = $.parseJSON(data);
-            $("#tbDatos").prepend(piezas.html);
-        });
-    }
-</script>
+
 </html>

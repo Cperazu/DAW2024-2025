@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="65ab541a-3a4f-404c-8221-eebfb66ab9d2" name="miOVH_2.0" url="">
+        <fileTransfer accessType="SFTP" host="57.129.43.161" port="22" sshConfigId="e86e7744-3e8b-4189-917b-245aa9283f4d" sshConfig="ubuntu@57.129.43.161:22 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

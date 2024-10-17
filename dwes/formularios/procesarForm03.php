@@ -29,8 +29,4 @@ if (!empty($_POST["nombre"])) {
         '<td>' . $nuevoDato['observaciones'] . '</td>' .
         '</tr>';
 }
-
-echo json_encode([
-    "html" => $html,
-    "items" => count($data),
-    "demoPieza" =>$currentDateTime->format('Y-m-d H:i:s')]);
+header("location:form03.php");

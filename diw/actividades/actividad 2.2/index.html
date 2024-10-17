@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header><b>INFORMACIÓN SOBRE EL PRODUCTO</b></header>
+    <form action="./proceso.php" method="post">
+      <div id="datosBasicos">
+        <label class="mainLabels" for="datosBasicos">Datos Básicos</label>
+        <div>
+            <div>
+                <label for="nombre">Nombre</label> <input type="text" name="nombre" />
+            </div>
+                <label id="textAreaLabel" for="descripcion">Descripcion</label> 
+                <textarea name="descripcion" id="descripcionTextArea"></textarea>
+            </div>
+        </div>
+      </div>
+      <div id="datosEconomicos">
+        <label class="mainLabels" for="datosEconomicos">Datos Económicos</label>
+        <div></div>
+      </div>
+    </form>
+  </body>
+</html>
