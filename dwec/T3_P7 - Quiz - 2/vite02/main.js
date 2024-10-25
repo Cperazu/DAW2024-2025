@@ -1,3 +1,17 @@
+
+
+const questions = [
+    "What is the capital of France?", 
+    "What is the longest river in the world?", 
+    "Who wrote Romeo and Juliet?", 
+    "How many planets are there in our solar system?"
+];
+
+let page = 0;
+function currentQuestion() {
+    return questions[question];
+};
+
 // BODY
 const Body = document.querySelector("body");
 const divContainer = document.createElement("div");
@@ -14,7 +28,7 @@ const divContainerAnswers = document.createElement("div");
 const divContainerFooter = document.createElement("div");
 
 h1.textContent = "Quiz Question";
-p.textContent = "What is the capital of France?";
+p.textContent = questions[page];
 divContainerAnswers.setAttribute("class", "container-answers");
 divContainerFooter.setAttribute("class", "container-footer");
 
@@ -42,8 +56,32 @@ const nextButton = document.createElement("button");
 previousButton.textContent = "Previous";
 previousButton.setAttribute("class", "footer-btn");
 
+
 nextButton.textContent = "Next";
 nextButton.setAttribute("class", "footer-btn");
 
 divContainerFooter.appendChild(previousButton);
 divContainerFooter.appendChild(nextButton);
+
+
+// CAMBIO DE PREGUNTAS SEGÚN LA PÁGINA ACTUAL
+
+function setQuestion () {
+    p.textContent = questions[page];
+    previousButton.disabled = page > 0  == false;
+    nextButton.disabled = page < questions.length -1 == false
+};
+
+nextButton.addEventListener('click', () => {
+    if (page < questions.length - 1 ) {
+        page++;
+        setQuestion();
+    }
+});
+
+previousButton.addEventListener('click', ()=> {
+    if (page > 0) {
+        page--;
+        setQuestion();
+    }
+});
