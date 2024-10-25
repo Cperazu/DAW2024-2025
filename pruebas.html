@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Texto en el borde de un div</title>
+    <style>
+        body {
+            background-color: lightgrey; /* Color de fondo para la visualización */
+            display: flex;               /* Flexbox para centrar el div */
+            justify-content: center;     /* Centra horizontalmente */
+            align-items: center;         /* Centra verticalmente */
+            height: 100vh;              /* Ocupa toda la altura de la ventana */
+            margin: 0;                  /* Elimina margen por defecto */
+        }
+
+        .bordered-div {
+            position: relative;          /* Necesario para el posicionamiento de pseudo-elementos */
+            width: 300px;               /* Ancho del div */
+            height: 200px;              /* Alto del div */
+            background-color: lightgrey; /* Color de fondo para el div */
+            border: 2px solid coral;    /* Borde del div */
+            border-radius: 10px;        /* Bordes redondeados (opcional) */
+            padding: 40px;              /* Espacio interno para evitar que el texto se superponga */
+            text-align: center;         /* Centra el texto dentro del div */
+        }
+
+        .bordered-div::before {
+            content: "Texto en el borde"; /* Texto que aparece en el borde */
+            position: absolute;            /* Posiciona el texto de manera absoluta */
+            top: -12px;                   /* Ajusta la posición vertical */
+            left: 10px;                   /* Ajusta la posición horizontal */
+            background-color: lightgrey;   /* Fondo para que el texto se vea sobre el borde */
+            padding: 0 5px;                /* Espacio interno para el texto */
+            font-weight: bold;             /* Texto en negrita (opcional) */
+            z-index: 1;                    /* Asegura que el texto esté sobre el borde */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="bordered-div">
+        Contenido del div
+    </div>
+
+</body>
+</html>

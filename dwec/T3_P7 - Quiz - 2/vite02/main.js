@@ -24,27 +24,16 @@ divContainer.appendChild(divContainerAnswers);
 divContainer.appendChild(divContainerFooter);
 
 //DIV RESPUESTAS
-optionQuestion = ["London", "Berlín", "París", "France"];
+const optionQuestion = ["London", "Berlín", "París", "France"];
 
-const button1 = document.createElement("button");
-const button3 = document.createElement("button");
-const button2 = document.createElement("button");
-const button4 = document.createElement("button");
-
-button1.setAttribute("class", "answer-btn");
-button2.setAttribute("class", "answer-btn");
-button3.setAttribute("class", "answer-btn");
-button4.setAttribute("class", "answer-btn");
-
-button1.textContent = optionQuestion[0];
-button2.textContent = optionQuestion[1];
-button3.textContent = optionQuestion[2];
-button4.textContent = optionQuestion[3];
-
-divContainerAnswers.appendChild(button1);
-divContainerAnswers.appendChild(button2);
-divContainerAnswers.appendChild(button3);
-divContainerAnswers.appendChild(button4);
+optionQuestion.forEach(Text => {
+    const button =document.createElement("button");
+    button.setAttribute("class", "answer-btn")
+    const li = document.createElement("li")
+    li.textContent = Text;
+    button.appendChild(li);
+    divContainerAnswers.appendChild(button);
+});
 
 //DIV FOOTER
 const previousButton = document.createElement("button");

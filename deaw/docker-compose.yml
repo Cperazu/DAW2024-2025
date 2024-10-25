@@ -1,0 +1,10 @@
+services:
+  web:
+    image: httpd
+    container_name: c_docker_compose_apache_exmn
+
+  db:
+    image: mariadb  
+    container_name: c_docker_compose_mariasb_exm
+    volumes:
+      - ./html:/var/lib/mysql

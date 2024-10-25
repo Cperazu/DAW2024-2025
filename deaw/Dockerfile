@@ -1,8 +1,3 @@
-# Usa la imagen oficial de Nginx
-FROM nginx:alpine
-
-# Copia tu archivo estático al contenedor
-COPY ./html /usr/share/nginx/html
-
-# Expone el puerto 80
+FROM httpd
+COPY ./html /usr/local/apache2/htdocs/
 EXPOSE 80
