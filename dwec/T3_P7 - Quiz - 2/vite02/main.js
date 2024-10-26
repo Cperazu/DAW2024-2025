@@ -1,24 +1,25 @@
 
 
 const questions = [
-    "What is the capital of France?", 
-    "What is the longest river in the world?", 
-    "Who wrote Romeo and Juliet?", 
-    "How many planets are there in our solar system?"
+  "What is the capital of France?", 
+  "What is the longest river in the world?", 
+  "Who wrote Romeo and Juliet?", 
+  "How many planets are there in our solar system?"
 ];
 
 let page = 0;
 function currentQuestion() {
-    return questions[question];
+  return questions[question];
 };
 
 // BODY
-const Body = document.querySelector("body");
+
+const body = document.querySelector("body");
 const divContainer = document.createElement("div");
 
 divContainer.setAttribute("class", "container");
 
-Body.appendChild(divContainer);
+body.appendChild(divContainer);
 
 // DIV PRINCIPAL
 
@@ -41,12 +42,12 @@ divContainer.appendChild(divContainerFooter);
 const optionQuestion = ["London", "Berlín", "París", "France"];
 
 optionQuestion.forEach(Text => {
-    const button =document.createElement("button");
-    button.setAttribute("class", "answer-btn")
-    const li = document.createElement("li")
-    li.textContent = Text;
-    button.appendChild(li);
-    divContainerAnswers.appendChild(button);
+  const button =document.createElement("button");
+  button.setAttribute("class", "answer-btn")
+  const li = document.createElement("li")
+  li.textContent = Text;
+  button.appendChild(li);
+  divContainerAnswers.appendChild(button);
 });
 
 //DIV FOOTER
@@ -67,21 +68,21 @@ divContainerFooter.appendChild(nextButton);
 // CAMBIO DE PREGUNTAS SEGÚN LA PÁGINA ACTUAL
 
 function setQuestion () {
-    p.textContent = questions[page];
-    previousButton.disabled = page > 0  == false;
-    nextButton.disabled = page < questions.length -1 == false
+  p.textContent = questions[page];
+  previousButton.disabled = page > 0  == false;
+  nextButton.disabled = page < questions.length -1 == false
 };
 
 nextButton.addEventListener('click', () => {
-    if (page < questions.length - 1 ) {
-        page++;
-        setQuestion();
-    }
+  if (page < questions.length - 1 ) {
+      page++;
+      setQuestion();
+  }
 });
 
 previousButton.addEventListener('click', ()=> {
-    if (page > 0) {
-        page--;
-        setQuestion();
-    }
+  if (page > 0) {
+      page--;
+      setQuestion();
+  }
 });
