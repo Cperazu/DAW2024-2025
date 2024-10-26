@@ -1,25 +1,29 @@
 let page = 0;
-let answersCount = false;
+
 let pageObj = [
   {
     1: "What is the capital of France?",
     2: ["London", "Berlín", "Paris", "Madrid"],
-    3: ""
+    3: "",
+    4: "Paris"
   },
   {
     1: "What is the longest river in the world?",
     2: ["Amazonas", "Nilo", "Yangtsé", "Miño"],
-    3: ""
+    3: "",
+    4: "Nilo"
   },
   {
     1: "Who wrote Romeo and Juliet?",
     2: ["Jane Austen", "Cervantes", "William Shakerpeare", "Charles Dickens"],
-    3: ""
+    3: "",
+    4: "William Shakerpeare"
   },
   {
     1: "How many planets are there in our solar system?",
     2: ["7", "8", "9", "10"],
-    3: ""
+    3: "",
+    4: "8"
   },
 ];
 
@@ -90,14 +94,6 @@ divContainerFooter.appendChild(checkButton);
 */
 function setQuestion() {
   p.textContent = pageObj[page][1];
-
-  /*
-  desabilita el boton 'Previus' si estamos en la primera pagina o 'Next' si estamos 
-  en la última.
-  */
-  previousButton.disabled = page > 0 == false;
-  nextButton.disabled = page < pageObj.length - 1 == false;
-  checkButton.disabled =  true;
 }
 
 /*
@@ -145,11 +141,27 @@ function setAnswers() {
 
           saveAswers();
           countSavedAswers();
+          checkButtonUpdate();
     })
   });
 
+    /*
+  desabilita el boton 'Previus' si estamos en la primera pagina o 'Next' si estamos 
+  en la última.
+  */
+previousButton.disabled = page > 0 == false; 
+nextButton.disabled = page < pageObj.length - 1 == false;
+checkButton.disabled =  true;
 };
 
+
+/* 
+Si countSavedAnswers() devuelve true (es decir, hay 4 respuestas almacenadas en pageObj 
+la condición de checkButton.disable es false y por tanto se activa el boton)
+*/
+function checkButtonUpdate(){
+  checkButton.disabled =  countSavedAswers() != true;
+};
 
 /* 
 Esta funcion en caso de que exista un boton con el atributo 'selected' = 'true' guarda en una 
@@ -164,6 +176,10 @@ function saveAswers() {
   }
 }
 
+/* 
+  Cuenta todas las respuestas guardadas en pageObj y devuelve 
+  true si llegan a 4 o false en caso contrario
+*/
 function countSavedAswers() {
   let count = 0;
   pageObj.forEach((po) => {
@@ -172,24 +188,33 @@ function countSavedAswers() {
     }
   });
 
-  answersCount = (count == 4);
+  return (count == 4);
 };
 
+function correctAnswers(){
+  let count = 0;
+  pageObj.forEach((po) => {
+    if (po[3]==po[4]) {
+      count++;
+    }
+  });
+  
+    alert(count + " of " + pageObj.length);
+
+};
 
 // CONTROL PRINCIPAL DEL FLUJO
-
-
 
 /* 
   Carga de las páginas del Quiz según el boton que pulsemos
 */
-
 nextButton.addEventListener("click", () => {
   if (page < pageObj.length - 1) {
     page++;
     setQuestion();
     setAnswers();
-   
+    checkButtonUpdate();
+
   }
 });
 
@@ -198,11 +223,16 @@ previousButton.addEventListener("click", () => {
     page--;
     setQuestion();
     setAnswers();
+    checkButtonUpdate();
+
   }
+});
+
+checkButton.addEventListener(('click'), () =>{
+  correctAnswers();
 });
 
 //INICIAR PÁGINA WEB
 
 setQuestion();
 setAnswers();
-
