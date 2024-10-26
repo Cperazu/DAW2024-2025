@@ -23,13 +23,6 @@ let pageObj = [
   },
 ];
 
-let selectedAswersObject = {
-  0: "",
-  1: "",
-  2: "",
-  3: "",
-};
-
 function currentPage() {
   return page;
 }
