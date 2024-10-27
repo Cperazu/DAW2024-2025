@@ -191,6 +191,9 @@ function countSavedAnswers() {
   return (count == 4);
 };
 
+/* 
+  Cuenta las respuestas correctas y las muestra en forma de modal.
+*/
 function correctAnswers() {
   let count = 0;
   pageObj.forEach((po) => {
