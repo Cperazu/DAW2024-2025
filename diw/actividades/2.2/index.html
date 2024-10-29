@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="formContainer">
+      <form action="./proceso.php" method="post">
+        <div class="headerContainer">
+          <header><b>INFORMACIÓN SOBRE EL PRODUCTO</b></header>
+        </div>
+        <fieldset class="datosdivs">
+          <legend class="mainLabels , datos">Datos Basicos</legend>
+
+          <label class="mainLabels" for="nombre">Nombre</label>
+          <input class="blocks" type="text" name="nombre" autofocus />
+          <label class="mainLabels" id="textAreaLabel" for="descripcion">Descripcion</label>
+          <textarea
+            class="blocks"
+            name="descripcion"
+            id="descripcionTextArea"
+          ></textarea>
+          <div class="blocks">
+            <input type="checkbox" name="contadorVisitas" />
+            <label for="contadorVisitas">Añadir contador de visitas</label>
+          </div>
+          <div class="blocks">
+            <input type="checkbox" name="descuento" disabled />
+            <label for="descuento">Descuento</label>
+          </div>
+        </fieldset>
+        <fieldset class="datosdivs">
+          <legend class="mainLabels , datos">Datos Económicos</legend>
+          <div class="agrupados , blocks">
+            <div class="agrupados-items">
+              <label class="mainLabels" for="precio">Precio</label>
+              <input type="text" name="precio" required />
+            </div>
+            <div class="agrupados-items">
+              <label class="mainLabels" id="impuestosLabel" for="impuestos">Impuestos</label>
+              <select id="impuestos" name="impuestos">
+                <option>4%</option>
+                <option>7%</option>
+                <option>16%</option>
+                <option>25%</option>
+              </select>
+            </div>
+          </div>
+
+          <label class="mainLabels" for="categoria">Categoría</label>
+          <div>
+            <select class="blocks" size="3">
+              <option value="Tecnología">Tecnología</option>
+              <option value="Hogar">Hogar</option>
+              <option value="Deporte" selected>Deporte</option>
+            </select>
+          </div>
+
+          <label class="mainLabels , blocks" for="promocion">Promoción</label>
+          <div class="blocks">
+            <input type="radio" name="radio" checked/>
+            <label>Ninguno</label>
+          </div>
+          <div class="blocks">
+            <input type="radio" name="radio" />
+            <label>Transporte gratuito</label>
+          </div>
+          <div class="blocks">
+            <input type="radio" name="radio" />
+            <label>Descuento 5%</label>
+          </div>
+        </fieldset>
+        <div class="botones">
+          <button  class="mainLabels , textoBlanco">Guardar cambios</button>
+          <button  class="mainLabels , textoBlanco">Borrar los datos introducidos</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
