@@ -32,12 +32,12 @@ function currentPage() {
 }
 
 // BODY
-const Body = document.querySelector("body");
+const body = document.querySelector("body");
 const divContainer = document.createElement("div");
 
 divContainer.setAttribute("class", "container");
 
-Body.appendChild(divContainer);
+body.appendChild(divContainer);
 
 // DIV PRINCIPAL
 
