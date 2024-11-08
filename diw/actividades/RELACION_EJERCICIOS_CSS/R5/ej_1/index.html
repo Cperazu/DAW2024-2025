@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    p::first-letter {
+        text-transform: uppercase;
+    }
+
+    ul:first-of-type li {
+        list-style-type: circle;
+    }
+
+    ul:nth-of-type(2) li {
+        list-style-type: square;
+    }
+
+    ol:first-of-type li {
+        list-style-type: upper-roman;
+    }
+    
+    ol:nth-of-type(2) li {
+        list-style-type: lower-alpha;
+    }
+</style>
+<body>
+    <p>ejemplo de lista desordenada: </p>
+    <ul>
+        <li>Cafe</li>
+        <li>Te</li>
+        <li>Coca Cola</li>
+    </ul>
+    <ul>
+        <li>Cafe</li>
+        <li>Te</li>
+        <li>Coca Cola</li>
+    </ul>
+
+    <p>ejemplo de lista ordenada: </p>
+    <ol>
+        <li>Cafe</li>
+        <li>Te</li>
+        <li>Coca Cola</li>
+    </ol>
+    <ol>
+        <li>Cafe</li>
+        <li>Te</li>
+        <li>Coca Cola</li>
+    </ol>
+</body>
+</html>

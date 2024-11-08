@@ -1,0 +1,29 @@
+* {
+    color: white
+}
+
+body {
+    background-color: rgb(108, 108, 108);
+}
+
+.introduccion{
+    color: dodgerblue ;
+    font-weight: 800;
+    font-size: 3rem;
+    text-decoration: underline;
+}
+
+.listaimportantes{
+    border: 8px solid orange;
+    border-style: ridge;
+    font-size: 2rem;
+
+}
+
+#nucleonoticia1 {
+    color: black;
+    font-style: italic;
+    font-weight: bolder;
+    font-size: 1.2rem;
+}
+
