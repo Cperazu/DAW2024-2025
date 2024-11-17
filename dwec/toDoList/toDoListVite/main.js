@@ -1,5 +1,7 @@
+const body = document.querySelector('body')
+
 // Selecciono el div principal que va a tener la clase container y se la aplico.
-const divContainer = document.querySelector('div');
+const divContainer = body.querySelector('div');
 divContainer.setAttribute("class", "container")
 
 // Selecciono el div que va a tener la clase search y se la aplico.
@@ -9,7 +11,8 @@ divContainer.querySelector("div:first-of-type").setAttribute("class", "search")
 divContainer.querySelector('div:first-of-type > form > button:first-of-type').setAttribute('class', 'btn-add')
 
 // Selecciono el button que va a tener la clase li-container y se la aplico.
-divContainer.querySelector('div:nth-of-type(2)').setAttribute("class", "li-container")
+const liDiv = divContainer.querySelector('div:nth-of-type(2)')
+liDiv.setAttribute("class", "li-container")
 
 // Selecciono el button que va a tener la clase empty y se la aplico.
 divContainer.querySelector('div:nth-of-type(3)').setAttribute("class", "empty")
@@ -21,16 +24,47 @@ divContainer.querySelector('div:last-of-type').setAttribute("class", "task-count
 // para ahorrarnos tiempo en un futuro.
 const taskButton = divContainer.querySelector('button[class=btn-add]')
 
-taskButton.addEventListener('click', ()=>{
-  const ul = divContainer.querySelector('div:nth-of-type(2) > ul')
+// constante del párrafo que te indica que cuando no tienes tareas pendientes
+const noTasks = divContainer.querySelector('div[class=empty] p')
 
-  const li = document.createElement('li')
-  const p = document.createElement('p')
-  const span = document.createElement('span')
-  span.innerHTML = 'hola'
+//constate del span que te muestra el número de tareas pendientes
+const numTasks = body.querySelector('div[class=task-count] span:nth-of-type(2)')
 
-  p.appendChild(span)
-  li.appendChild(p)
-  ul.appendChild(li)
-  
+// FLUJO PRINCIPAL DE LA PAGINA WEB (BOTON '+') 
+taskButton.addEventListener('click', (event)=>{
+ event.preventDefault();
+ addTask()
+ tasksCount()
+
 })
+
+// Funcion que añade una nueva tarea 
+function addTask(){
+
+    const ul = divContainer.querySelector('div:nth-of-type(2) > ul')
+
+    const li = document.createElement('li')
+    const p = document.createElement('p')
+    const span = document.createElement('span')
+    span.innerHTML = 'hola'
+    const close = document.createElement('button')
+    close.setAttribute('class', 'btn-delete')
+    close.textContent = 'x'
+
+    p.appendChild(span)
+    p.appendChild(close)
+    li.appendChild(p)
+    ul.appendChild(li)
+}
+
+let tasks = 0;
+function tasksCount(){
+    tasks ++
+    
+    numTasks.textContent = tasks
+
+    if(tasks > 0){
+        
+        noTasks.textContent = ''
+     }
+}
