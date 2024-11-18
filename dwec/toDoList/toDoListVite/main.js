@@ -30,41 +30,47 @@ const noTasks = divContainer.querySelector('div[class=empty] p')
 //constate del span que te muestra el número de tareas pendientes
 const numTasks = body.querySelector('div[class=task-count] span:nth-of-type(2)')
 
+//constante del input que nombra la tarea
+const nameTaskInput = divContainer.querySelector('div:first-of-type form input')
+
 // FLUJO PRINCIPAL DE LA PAGINA WEB (BOTON '+') 
+
+// Cantidad de tareas activas
+let tasks = 0;
+
 taskButton.addEventListener('click', (event)=>{
  event.preventDefault();
  addTask()
- tasksCount()
-
 })
 
 // Funcion que añade una nueva tarea 
 function addTask(){
 
     const ul = divContainer.querySelector('div:nth-of-type(2) > ul')
-
     const li = document.createElement('li')
     const p = document.createElement('p')
     const span = document.createElement('span')
-    span.innerHTML = 'hola'
+    span.textContent = nameTaskInput.value
+    console.log(span.textContent)
     const close = document.createElement('button')
     close.setAttribute('class', 'btn-delete')
     close.textContent = 'x'
+    close.addEventListener('click', ()=> {
+        ul.removeChild(li)
+        tasks--
+        numTasks.textContent = tasks
+    })
 
     p.appendChild(span)
     p.appendChild(close)
     li.appendChild(p)
     ul.appendChild(li)
-}
 
-let tasks = 0;
-function tasksCount(){
-    tasks ++
-    
+    tasks++
     numTasks.textContent = tasks
 
-    if(tasks > 0){
-        
-        noTasks.textContent = ''
-     }
+    if(tasks>0){
+        noTasks.textContent = ''    
+    }
 }
+
