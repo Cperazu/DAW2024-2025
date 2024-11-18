@@ -1,0 +1,4 @@
+- Que es un call back en js?
+- promesas (promise)
+    ... son asisncronas (salen del hilo de ejecución y se colocan al final del mismo)
+- promesas que devuelven promesas ?? -> pending

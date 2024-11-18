@@ -47,11 +47,18 @@ taskButton.addEventListener('click', (event)=>{
 function addTask(){
 
     const ul = divContainer.querySelector('div:nth-of-type(2) > ul')
+
     const li = document.createElement('li')
+    li.addEventListener('click', ()=>{
+        li.style.textDecoration = 'line-through'
+    })
+
     const p = document.createElement('p')
+
     const span = document.createElement('span')
     span.textContent = nameTaskInput.value
     console.log(span.textContent)
+
     const close = document.createElement('button')
     close.setAttribute('class', 'btn-delete')
     close.textContent = 'x'
@@ -72,5 +79,7 @@ function addTask(){
     if(tasks>0){
         noTasks.textContent = ''    
     }
+
+    nameTaskInput.value = ''
 }
 
