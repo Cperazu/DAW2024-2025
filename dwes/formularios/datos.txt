@@ -1,9 +1,0 @@
-[
-    {
-        "nombre": "christian",
-        "edad": "22",
-        "sexo": "Hombre",
-        "observaciones": "",
-        "fecha": "2024-10-16 09:05:24"
-    }
-]
