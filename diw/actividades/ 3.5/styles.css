@@ -21,21 +21,32 @@ ul {
   margin: 0;
   height: 100%;
 }
-a {
+button {
   display: flex;
   align-items: center;
+  justify-content: center;
   text-decoration: none;
   height: 66%;
+  width: 100px;
+  border-top: none ;
+  border-bottom: none ;
+  border-left: none ;
   border-right: blue solid 1px;
+  background-color: black;
+  text-decoration: none;
 }
 
-header a:last-of-type {
+button:hover {
+  background-color: #1f72de;
+}
+header button:last-of-type {
   border: none;
 }
 li {
   display: inline;
   list-style: none;
-  color: white;
+  font-weight: 600;
+  color: rgb(255, 255, 255);
   margin: 0px 20px;
 }
 
@@ -55,9 +66,10 @@ li {
 .submain1 {
   display: flex;
   flex-wrap: wrap;
-  width: 25%;
+  width: 380px;
   height: 100%;
 }
+
 .submain2 {
   display: flex;
   flex-direction: column;
@@ -66,13 +78,18 @@ li {
 }
 .imgDiv {
   display: flex;
-  width: 100px;
-  height: 100px;
-  margin: 0px 6%;
+  width: 125px;
+  height: 125px;
+  align-items: center;
+  justify-content: center;
 }
 img {
   width: 100px;
   height: 100px;
+}
+
+.imgDiv:hover{
+  background-color: rgb(218, 232, 255);
 }
 
 h1 {
@@ -87,23 +104,26 @@ h1 {
   white-space: pre-line;
 }
 
-table td {
-  border-collapse: collapse;
-  border: solid black 4px;
-  margin: 0;
-  padding: 0;
-}
-
 .main2 {
   display: flex;
-  width: 100%;
-  height: 40vh;
-  
+  width: 100%;  
 }
 .main2 p {
-  line-height: 1.7em;
-  margin: 0 20px;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
   text-align: justify;
+  word-spacing: 0.3em;
+  text-wrap:stable;
+  line-height: 1.7em;
+  height: 430px;
+  padding: 0 20px;
   border-right: 10px solid black;
+
+}
+
+/* FOOTER */
+
+footer{
+  width: 100%;
+  height: 100px;
 }
