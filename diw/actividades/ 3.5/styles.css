@@ -3,6 +3,8 @@
 }
 body {
   overflow: scroll;
+  font-size: 1.18em;
+
 }
 /* HEADER */
 
@@ -131,11 +133,16 @@ footer {
 }
 
 footer button {
-  width: 150px;
+  width: 180px;
   height: 100%;
   color: rgb(27, 99, 255);
   background-color: white;
   border: none;
   font-size: 1.5em;
   font-weight: 600;
+
+}
+
+footer button:hover{
+  background-color: #dae0ff;
 }
