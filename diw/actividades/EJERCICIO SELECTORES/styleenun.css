@@ -1,0 +1,102 @@
+/* Peticiones de estilos */
+
+/* 1. Selecciona el título principal dentro del div con el atributo data-titulo="principal" y establece un tamaño de fuente de 24px y color de texto azul. */
+div[data-titulo="principal"] > h1 {
+  font-size: 24px;
+  color: blue;
+}
+
+/* 2. Selecciona el párrafo con la clase "importante" y establece el estilo de fuente en negrita. */
+p[class="importante"] {
+  font-weight: bold;
+}
+
+/* 3. Selecciona el último elemento de la lista no ordenada y dale un fondo de color gris claro. */
+ul > li:last-child {
+  background-color: lightgrey;
+}
+
+/* 4. Selecciona el párrafo con la clase "resaltado" dentro de la primera sección y establece un fondo de color amarillo. */
+section:first-of-type > p[class="resaltado"] {
+  background-color: yellow;
+}
+
+/* 5. Selecciona el párrafo con la clase "resaltado" que sigue inmediatamente a un título h2 en la segunda sección y establece el estilo de fuente en itálica. */
+section:nth-of-type(2) > h2 + p[class="resaltado"] {
+  font-style: italic;
+}
+
+/* 6. Selecciona el primer título h2 en el primer <section> y establece el color de fondo en verde. */
+
+section:first-of-type > h2:first-of-type {
+  background-color: green;
+}
+
+/* 7. Selecciona el segundo título h2 en el primer <section> y establece el color de fondo en amarillo. */
+section:first-of-type > h2:nth-of-type(2) {
+  background-color: yellow;
+}
+
+/* 8. Selecciona el tercer título h2 en el primer <section> y establece el color de fondo en naranja. */
+section:first-of-type > h2:nth-of-type(3) {
+    background-color: orange;
+  }
+
+/* 9. Selecciona todos los párrafos dentro del segundo <section> y establece un margen inferior de 15px. */
+section:nth-of-type(2n) > p {
+    margin-bottom: 15px;
+}
+
+/* 10. Selecciona los elementos de lista dentro de un <ul> que están precedidos por un título h2 y establece el estilo de fuente en negrita. */
+h2 + ul > li {
+    font-weight: bolder;
+}
+/* 11. Selecciona los elementos de lista dentro de un <ul> que están precedidos por un título h2 y establece un color de fondo gris. */
+h2 + ul > li {
+    background-color: gray;
+   }
+
+/* 12. Selecciona todos los elementos de lista que contienen un enlace y establece un borde de 1px sólido azul. */
+li > a {
+    border: 1px solid blue;
+   }
+
+/* 13. Selecciona el primer elemento de lista en el segundo <ul> y establece un color de fondo amarillo. */
+ul:nth-of-type(2) > li:first-child {
+    background-color: yellow;
+   }
+
+/* 14. Selecciona el último elemento de lista en el segundo <ul> y establece un color de fondo verde. */
+ul:nth-of-type(2) > li:last-child {
+    background-color: yellow;
+   }
+
+/* 15. Selecciona el párrafo con la clase "importante" que sigue inmediatamente al título h1 y establece el estilo de fuente en subrayado. */
+h1 + p[class=importante] {
+    text-decoration: underline;
+}
+
+/* 16. Selecciona el primer párrafo dentro de un <div> que está precedido por un título h1 y establece el color de texto en morado. */
+h1 + div > p:first-of-type{
+    color: purple;
+}
+
+/* 17. Selecciona el último párrafo dentro de un <div> que está precedido por un título h1 y establece un borde de 2px sólido rojo. */
+h1 + div > p:last-of-type {
+    border: 2px solid red;
+}
+
+/* 18. Selecciona el segundo párrafo dentro del segundo <section> y establece el estilo de fuente en cursiva. */
+section:nth-last-of-type(2) > p:nth-of-type(2){
+    font-style: italic;
+}
+
+/* 19. Selecciona el párrafo con la clase "resaltado" que está precedido por un título h2 y establece el estilo de fuente en negrita. */
+h2 + p[class=resaltado] {
+    font-weight: bold;
+}
+
+/* 20. Selecciona el párrafo con la clase "resaltado" que sigue inmediatamente a un párrafo con la clase "importante" y establece el color de fondo en rosa. */
+p[class=importante] + p[class=resaltado] {
+    background-color: pink;
+}

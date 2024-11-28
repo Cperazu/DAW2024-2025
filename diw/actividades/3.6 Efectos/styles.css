@@ -1,0 +1,120 @@
+body {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+#container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  border: red solid 2px;
+}
+#efectos {
+  display: flex;
+  width: 20%;
+  height: 50px;
+  border: black 1px solid;
+
+  margin-top: 40px;
+  color: white;
+  background-color: black;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+  text-transform: uppercase;
+  border-radius: 20px;
+  transform: rotate(10deg);
+  box-shadow: 10px 10px 14px rgb(63, 63, 63);
+}
+
+#botones {
+  display: flex;
+  display: flex;
+  width: 32%;
+  height: auto;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+button {
+  width: 130px;
+  height: 40px;
+  border-radius: 5px;
+  font-size: 1em;
+  border-style: solid;
+}
+
+#boton1 {
+  color: white;
+  background-color: rgb(95, 138, 249);
+  border-color: rgb(95, 138, 249);
+  transition: transform 2s ease;
+}
+
+#boton1:hover {
+  transform: scale(1.5);
+  cursor: crosshair;
+}
+
+#boton2 {
+  color: rgb(95, 138, 249);
+  background-color: white;
+  border-color: rgb(95, 138, 249);
+  transition: transform 2s ease;
+}
+
+#boton2:hover {
+  transform: scale(1.5);
+  cursor:pointer;
+}
+
+#boton3 {
+  color: white;
+  background-color: rgb(235, 60, 72);
+  border-color: rgb(235, 60, 72);
+  transition: transform 2s ease;
+}
+
+#boton3:hover {
+  transform: scale(1.5);
+  cursor:help;
+}
+
+#ejemplos {
+  display: flex;
+  width: 40%;
+  justify-content: space-between;
+  font-size: 1.2em;
+  margin-top: 40px;
+}
+#ejemploSombra {
+  border: 1px solid red;
+  width: 40%;
+  height: 100px;
+  background-color: white;
+  border-radius: 8px;
+  border: solid 1px grey;
+  padding: 20px;
+  box-shadow: 5px 5px 10px rgb(180, 180, 180);
+}
+
+#ejemploSombra p:first-of-type {
+  font-weight: bold;
+}
+#ejemploGradiente {
+  border: 1px solid blue;
+  width: 40%;
+  height: 100px;
+  background-color: rgb(95, 138, 249);
+  border-radius: 8px;
+  padding: 20px;
+  border: solid 1px grey;
+  color: white;
+  background: linear-gradient(180deg, rgb(95, 138, 249, 1), rgb(0, 81, 105));
+}
+
+#ejemploGradiente p:first-of-type {
+  font-weight: bold;
+}
