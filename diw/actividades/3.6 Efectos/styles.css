@@ -1,6 +1,17 @@
+:root {
+  --color-fondo: white;
+  --color-texto: black;
+  --color-sombra-efectos: grey;
+  --color-sombra-ejemplosombra: rgb(180, 180, 180);
+  --color-boton1-fondo: rgb(95, 138, 249);
+  --color-boton3-fondo: rgb(235, 60, 72);
+  --color-gradiente-ejemplogradiente: rgb(0, 81, 105);
+}
+
 body {
   margin: 0;
   box-sizing: border-box;
+  background-color: var(--color-fondo);
 }
 
 #container {
@@ -9,15 +20,14 @@ body {
   flex-direction: column;
   width: 100vw;
   height: 100vh;
-  border: red solid 2px;
 }
+
 #efectos {
   display: flex;
   width: 20%;
   height: 50px;
-  border: black 1px solid;
 
-  margin-top: 40px;
+  margin-top: 50px;
   color: white;
   background-color: black;
   justify-content: center;
@@ -26,7 +36,48 @@ body {
   text-transform: uppercase;
   border-radius: 20px;
   transform: rotate(10deg);
-  box-shadow: 10px 10px 14px rgb(63, 63, 63);
+  box-shadow: 10px 10px 14px var(--color-sombra-efectos);
+
+}
+
+#efectos:hover{
+  animation: helicoptero 0.4s infinite ease normal;
+}
+
+@keyframes helicoptero {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(36deg);
+  }
+  20% {
+    transform: rotate(72deg);
+  }
+  30% {
+    transform: rotate(108deg);
+  }
+  40% {
+    transform: rotate(144deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  60% {
+    transform: rotate(216deg);
+  }
+  70% {
+    transform: rotate(252deg);
+  }
+  80% {
+    transform: rotate(288deg);
+  }
+  90% {
+    transform: rotate(324deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 #botones {
@@ -48,8 +99,8 @@ button {
 
 #boton1 {
   color: white;
-  background-color: rgb(95, 138, 249);
-  border-color: rgb(95, 138, 249);
+  background-color: var(--color-boton1-fondo);
+  border-color: var(--color-boton1-fondo);
   transition: transform 2s ease;
 }
 
@@ -59,27 +110,27 @@ button {
 }
 
 #boton2 {
-  color: rgb(95, 138, 249);
-  background-color: white;
-  border-color: rgb(95, 138, 249);
+  background-color: var(--color-fondo);
+  color: var(--color-boton1-fondo);
+  border-color: var(--color-boton1-fondo);
   transition: transform 2s ease;
 }
 
 #boton2:hover {
   transform: scale(1.5);
-  cursor:pointer;
+  cursor: pointer;
 }
 
 #boton3 {
   color: white;
-  background-color: rgb(235, 60, 72);
-  border-color: rgb(235, 60, 72);
+  background-color: var(--color-boton3-fondo);
+  border-color: var(--color-boton3-fondo);
   transition: transform 2s ease;
 }
 
 #boton3:hover {
   transform: scale(1.5);
-  cursor:help;
+  cursor: help;
 }
 
 #ejemplos {
@@ -89,32 +140,48 @@ button {
   font-size: 1.2em;
   margin-top: 40px;
 }
+
 #ejemploSombra {
-  border: 1px solid red;
   width: 40%;
   height: 100px;
-  background-color: white;
+  background-color: var(--color-fondo);
   border-radius: 8px;
-  border: solid 1px grey;
+  border: solid 1px var(--color-sombra-efectos);
   padding: 20px;
-  box-shadow: 5px 5px 10px rgb(180, 180, 180);
+  box-shadow: 5px 5px 10px var(--color-sombra-ejemplosombra);
+  color: var(--color-texto);
 }
 
 #ejemploSombra p:first-of-type {
   font-weight: bold;
 }
+
 #ejemploGradiente {
-  border: 1px solid blue;
   width: 40%;
   height: 100px;
-  background-color: rgb(95, 138, 249);
+  background-color: var(--colo-boton1-fondo);
   border-radius: 8px;
   padding: 20px;
-  border: solid 1px grey;
+  border: solid 1px var(--color-sombra-efectos);
   color: white;
-  background: linear-gradient(180deg, rgb(95, 138, 249, 1), rgb(0, 81, 105));
+  background: linear-gradient(180deg, var(--color-boton1-fondo), var(--color-gradiente-ejemplogradiente));
 }
 
 #ejemploGradiente p:first-of-type {
   font-weight: bold;
+}
+
+#icons {
+  display: flex;
+  flex-direction: row;
+  margin-top: 60px;
+}
+
+img {
+  margin: 0 5px;
+  transition: transform 1.2s ease;
+}
+
+img:hover {
+  transform: scale(1.75);
 }
