@@ -5,7 +5,6 @@ export const database = {
         {id: 3, name: "Usuario 3"},
     ],
 };
-
 export function miPromesa(id){
         return new Promise((resolve,reject) => {
             const user = database.users.find((u) => u.id ===id);
