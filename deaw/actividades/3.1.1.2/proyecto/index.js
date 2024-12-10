@@ -4,7 +4,6 @@ const PORT = 3000;
 
 app.get('/', (req, res) => {
     res.send('¡Servidor Express funcionando en Docker!');
-
 });
 
 app.listen(PORT, () => {
