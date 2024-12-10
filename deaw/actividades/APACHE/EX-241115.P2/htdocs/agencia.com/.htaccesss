@@ -1,4 +1,0 @@
-AuthType Basic
-AuthName "Área Protegida"
-AuthUserFile "C:/Apache24/conf/.htpasswd"
-Require valid-user
