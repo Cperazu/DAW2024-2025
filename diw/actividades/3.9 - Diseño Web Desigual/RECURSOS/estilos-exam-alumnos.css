@@ -1,0 +1,194 @@
+
+*{
+	box-sizing:border-box;
+}
+
+/*Comenzamos con la versión móvil*/
+/*Hacemos el cuerpo de la web flexible*/
+body
+{
+	font-size: 16px;
+
+
+}
+
+/*Estilo para todos los enlaces de la web*/
+a
+{
+	color:black;
+	text-decoration: none;
+}
+a:hover
+{
+	cursor:pointer;
+	text-decoration: underline;
+}
+
+/*ESTILO DE LA CABECERA*/
+header
+{
+	/* Hacemos flexible la cabecera */
+	
+	
+	
+	border-bottom: 1px solid #ccc;
+}
+
+/*Posiciono el menú de hamburguesa el primero*/
+header > nav#menu-principal
+{
+	
+	padding-left:1rem;
+}
+header > picture#logo-cabecera
+{
+   /*Para alinear el logo verticalmente*/
+
+}
+header > picture#logo-cabecera > img{
+   /*Ancho fijo para la imagen de la cabecera. Debe ser 9 veces
+   el tamñaño raiz*/
+
+}
+
+/*Ocultar el input de la hamburguesa y el menú*/
+header > nav#menu-principal > input#menu-hamburger, header > nav#menu-principal > ul#menu
+{
+	
+}
+
+/*Para que aparezca el icono de hamburguesa y debajo la palabra MENÚ*/
+header > nav#menu-principal > label
+{
+
+
+
+}
+
+/*Estilo para el icono de hamburguesa*/
+header > nav#menu-principal > label span
+{
+	/* El tamaño debe ser 1.6 el tamaño raiz y en negrita. */
+
+
+}
+
+/*Estilo para la palabra MENÚ debajo de la hamburguesa*/
+header > nav#menu-principal > label > span:last-child
+{
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-size: 0.7rem;
+}
+
+header > nav#menu-principal > ul#menu{
+	list-style: none;
+}
+header > nav#menu-principal > ul#menu li{
+	padding: 0.3rem 0;
+}
+input#menu-hamburger:checked + #menu {
+	display: block;
+	position: absolute;
+	left: 0;
+	width: 100%;
+	text-align:center;
+	background: white;
+	padding: 2rem;
+}
+
+header > nav#bloque-iconos > ul{
+	padding-left: 0;
+    display:flex;	
+}
+
+header > nav#bloque-iconos > ul > li{
+	list-style: none;
+}
+
+/*Para separar los dos iconos */
+header > nav#bloque-iconos > ul > li:last-child
+{
+	
+
+}
+
+header > nav#bloque-iconos > ul > li > a >i{
+	font-size: 2rem;
+}
+
+/*CONTENIDO PRINCIPAL*/
+main
+{
+
+
+
+}
+
+main > article.item
+{
+/* Atributos como item flexible de main. En la versión móvil deben de aparecer dos
+item por fila */
+
+/* Atributos como contenedor flexible*/
+
+
+
+}
+
+main > article.item > *
+{
+	margin:0.2rem;
+}
+
+main > article.item > a 
+{
+	/*Coloco la imagen al principio*/
+
+}
+
+main > article.item > h3{
+	/*Coloco este elemento en su posición*/
+	
+	font-weight: normal;
+	padding-bottom: 0.6rem;
+}
+
+main > article.item > p{
+	/*Coloco este elemento en su posición*/
+
+}
+
+main > article.item > p > span.precio-oferta{
+	color:#04B486;
+	padding-right: 0.3rem;
+}
+
+main > article.item > p > span.precio-sin-oferta{
+	text-decoration:line-through;
+}
+
+main > article.item > a > picture > img
+{
+	/*La imagen tiene que tener un tamaño adecuado ocupando todo el ancho*/
+
+}
+
+/*El pie en la versión de móvil está oculto*/
+
+/*Para la versión de tablet, deben de aparecer 3 item´s por fila.
+Incluye las etiquetas necesarias para que se muestre el diseño mostrado para tablet.*/
+@media (min-width: 768px)
+{
+	
+}
+
+
+/*Para la versión de escritorio, deben de aparecer 5 item´s por fila.
+Incluye las etiquetas necesarias para que se muestre el diseño mostrado para tablet.
+El item "Chaleco Patch" debe de girar 360º y aumentar 2 veces su ancho y su alto, con una
+transición de 2s*/
+
+@media (min-width: 1024px)
+{
+
+}
